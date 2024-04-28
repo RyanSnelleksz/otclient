@@ -1,0 +1,17 @@
+
+JumpWindow < MainWindow
+  font: verdana-11px-antialised
+  size: 400 400
+  opacity: 1
+  color: #dfdfdf
+  text-offset: 0 6
+  text-align: top
+  image-source: /images/ui/window
+
+  Button
+    id: jumpButton
+    !text: tr('Jump!')
+    width: 90
+    x: 500
+    y: 0
+    @onClick: modules.game_jump.jump()
