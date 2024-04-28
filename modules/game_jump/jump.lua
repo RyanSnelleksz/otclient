@@ -53,17 +53,17 @@ function toggle() -- Used to switch between diding and showing the window
 end
 
 function jumpUpdate()
-if hidden == false then
+if hidden == false then -- When the window is hidden, don't move
 local x = button:getX()
 local y = button:getY()
 
-if x > 250 then
+if x > 250 then -- If we hit the end
 
 button:move(x - 10, y)
 
 else
 
-jump()
+jump()          -- jump
 
 end
 
@@ -71,7 +71,7 @@ end
 return scheduleEvent(modules.game_jump.jumpUpdate, 100)
 end
 
-function jump()
+function jump() -- Reset x and give y and new random value - JUMP!
 
 local rand = math.random(110, 440)
 
